@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BBD99335693F14DF99B82AF2 /* Pods_MalayaliDinoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7099FB686F2615A139EB8012 /* Pods_MalayaliDinoGame.framework */; };
 		FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */; };
 		FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */; };
 		FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */; };
@@ -15,13 +14,9 @@
 		FADB7BEC2EF4280E00F9DA19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADB7BEB2EF4280E00F9DA19 /* Assets.xcassets */; };
 		FADB7BEF2EF4280E00F9DA19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADB7BED2EF4280E00F9DA19 /* LaunchScreen.storyboard */; };
 		FADB7BF82EF428BE00F9DA19 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FADB7BF72EF428BE00F9DA19 /* Alamofire */; };
-		FADB7BFA2EF428BE00F9DA19 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FADB7BF92EF428BE00F9DA19 /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		529CD6554D41397B56BD6E7D /* Pods-MalayaliDinoGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MalayaliDinoGame.release.xcconfig"; path = "Target Support Files/Pods-MalayaliDinoGame/Pods-MalayaliDinoGame.release.xcconfig"; sourceTree = "<group>"; };
-		6295409A21BD1137C54261F3 /* Pods-MalayaliDinoGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MalayaliDinoGame.debug.xcconfig"; path = "Target Support Files/Pods-MalayaliDinoGame/Pods-MalayaliDinoGame.debug.xcconfig"; sourceTree = "<group>"; };
-		7099FB686F2615A139EB8012 /* Pods_MalayaliDinoGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MalayaliDinoGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB7BDF2EF4280B00F9DA19 /* MalayaliDinoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalayaliDinoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,27 +33,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADB7BF82EF428BE00F9DA19 /* Alamofire in Frameworks */,
-				FADB7BFA2EF428BE00F9DA19 /* AlamofireDynamic in Frameworks */,
-				BBD99335693F14DF99B82AF2 /* Pods_MalayaliDinoGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		400CE398FC122F8B8AFB90BC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7099FB686F2615A139EB8012 /* Pods_MalayaliDinoGame.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		47403A29A5004A1931F9A6B7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6295409A21BD1137C54261F3 /* Pods-MalayaliDinoGame.debug.xcconfig */,
-				529CD6554D41397B56BD6E7D /* Pods-MalayaliDinoGame.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -69,7 +52,6 @@
 				FADB7BE12EF4280B00F9DA19 /* MalayaliDinoGame */,
 				FADB7BE02EF4280B00F9DA19 /* Products */,
 				47403A29A5004A1931F9A6B7 /* Pods */,
-				400CE398FC122F8B8AFB90BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,11 +84,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FADB7BF32EF4280E00F9DA19 /* Build configuration list for PBXNativeTarget "MalayaliDinoGame" */;
 			buildPhases = (
-				7DD80FFC5391472681FA247B /* [CP] Check Pods Manifest.lock */,
 				FADB7BDB2EF4280B00F9DA19 /* Sources */,
 				FADB7BDC2EF4280B00F9DA19 /* Frameworks */,
 				FADB7BDD2EF4280B00F9DA19 /* Resources */,
-				CE680B9A2A832B426A17E484 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -115,7 +95,6 @@
 			name = MalayaliDinoGame;
 			packageProductDependencies = (
 				FADB7BF72EF428BE00F9DA19 /* Alamofire */,
-				FADB7BF92EF428BE00F9DA19 /* AlamofireDynamic */,
 			);
 			productName = MalayaliDinoGame;
 			productReference = FADB7BDF2EF4280B00F9DA19 /* MalayaliDinoGame.app */;
@@ -169,48 +148,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7DD80FFC5391472681FA247B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MalayaliDinoGame-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE680B9A2A832B426A17E484 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MalayaliDinoGame/Pods-MalayaliDinoGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MalayaliDinoGame/Pods-MalayaliDinoGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MalayaliDinoGame/Pods-MalayaliDinoGame-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FADB7BDB2EF4280B00F9DA19 /* Sources */ = {
@@ -366,7 +303,6 @@
 		};
 		FADB7BF42EF4280E00F9DA19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6295409A21BD1137C54261F3 /* Pods-MalayaliDinoGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,7 +333,6 @@
 		};
 		FADB7BF52EF4280E00F9DA19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 529CD6554D41397B56BD6E7D /* Pods-MalayaliDinoGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -465,11 +400,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FADB7BF62EF428BE00F9DA19 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		FADB7BF92EF428BE00F9DA19 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FADB7BF62EF428BE00F9DA19 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
