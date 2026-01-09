@@ -11,6 +11,9 @@ class HomeVC: CommonVC {
 
     @IBOutlet weak var wlcmImg: UIImageView!
     
+    @IBOutlet weak var startBtnV: UIView!
+    @IBOutlet weak var startBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,4 +27,9 @@ class HomeVC: CommonVC {
         self.wlcmImg.image = imgs[0]
     }
 
+    @IBAction func startBtnAction(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameVC") as! GameVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -8,14 +8,22 @@
 import UIKit
 
 class GameVC: CommonVC {
+    
+    private var currScore: Int = 0
+    private var highScore: Int = 0
+    
+    private var isGameStart: Bool = false
+    private var didCollide: Bool = false
+    
+    private var dinoPosY: CGFloat = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        updateInterfaceStyle()
     }
     
-
     /*
     // MARK: - Navigation
 

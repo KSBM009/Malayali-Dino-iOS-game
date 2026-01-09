@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -30,26 +30,62 @@
                                                         <rect key="frame" x="5" y="25" width="383" height="680"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Malayali Dino Game!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cx-fl-cb6">
-                                                                <rect key="frame" x="10" y="85" width="363" height="20.333333333333329"/>
+                                                                <rect key="frame" x="10" y="35" width="363" height="20.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                <color key="textColor" name="TxtColor"/>
+                                                                <color key="textColor" name="SecondaryColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fuO-61-83D">
-                                                                <rect key="frame" x="5" y="190.33333333333331" width="373" height="349.99999999999994"/>
+                                                                <rect key="frame" x="5" y="90.333333333333371" width="373" height="350"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="350" id="p4r-Ht-l36"/>
                                                                 </constraints>
                                                             </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4e-gW-ilh">
+                                                                <rect key="frame" x="116.66666666666669" y="495.33333333333337" width="150" height="75"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCG-Bx-Ilo">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                                        <color key="textColor" name="PrimaryColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxi-x3-ecc">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                                        <connections>
+                                                                            <action selector="startBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Z8-0E-qG2"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="SecondaryColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="75" id="43H-vJ-bBe"/>
+                                                                    <constraint firstItem="Rxi-x3-ecc" firstAttribute="top" secondItem="y4e-gW-ilh" secondAttribute="top" id="BWf-B2-IP7"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="OCG-Bx-Ilo" secondAttribute="trailing" id="BuW-8C-phO"/>
+                                                                    <constraint firstItem="OCG-Bx-Ilo" firstAttribute="top" secondItem="y4e-gW-ilh" secondAttribute="top" id="FGf-kp-964"/>
+                                                                    <constraint firstItem="OCG-Bx-Ilo" firstAttribute="leading" secondItem="y4e-gW-ilh" secondAttribute="leading" id="IQc-aC-eHq"/>
+                                                                    <constraint firstItem="Rxi-x3-ecc" firstAttribute="leading" secondItem="y4e-gW-ilh" secondAttribute="leading" id="n6E-dc-D6F"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Rxi-x3-ecc" secondAttribute="bottom" id="pEE-vu-Ob2"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="OCG-Bx-Ilo" secondAttribute="bottom" id="qpY-CF-Go8"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Rxi-x3-ecc" secondAttribute="trailing" id="tkV-S1-huf"/>
+                                                                    <constraint firstAttribute="width" constant="150" id="yuk-8O-nxx"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="0Cx-fl-cb6" secondAttribute="trailing" constant="10" id="CDb-3t-cJ9"/>
                                                             <constraint firstItem="fuO-61-83D" firstAttribute="leading" secondItem="WPb-p6-Ap2" secondAttribute="leading" constant="5" id="Mrw-os-LJh"/>
-                                                            <constraint firstItem="fuO-61-83D" firstAttribute="top" secondItem="0Cx-fl-cb6" secondAttribute="bottom" constant="85" id="Rta-zE-Koh"/>
+                                                            <constraint firstItem="y4e-gW-ilh" firstAttribute="centerX" secondItem="WPb-p6-Ap2" secondAttribute="centerX" id="QbC-OO-DLr"/>
+                                                            <constraint firstItem="fuO-61-83D" firstAttribute="top" secondItem="0Cx-fl-cb6" secondAttribute="bottom" constant="35" id="Rta-zE-Koh"/>
                                                             <constraint firstItem="0Cx-fl-cb6" firstAttribute="leading" secondItem="WPb-p6-Ap2" secondAttribute="leading" constant="10" id="Zar-oK-gOL"/>
                                                             <constraint firstAttribute="trailing" secondItem="fuO-61-83D" secondAttribute="trailing" constant="5" id="evA-t7-18t"/>
-                                                            <constraint firstItem="0Cx-fl-cb6" firstAttribute="top" secondItem="WPb-p6-Ap2" secondAttribute="top" constant="85" id="yp5-yA-Gl6"/>
+                                                            <constraint firstItem="y4e-gW-ilh" firstAttribute="top" secondItem="fuO-61-83D" secondAttribute="bottom" constant="55" id="gQt-3K-hLl"/>
+                                                            <constraint firstItem="0Cx-fl-cb6" firstAttribute="top" secondItem="WPb-p6-Ap2" secondAttribute="top" constant="35" id="yp5-yA-Gl6"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -73,7 +109,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="anO-3i-kaY"/>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
                                 <constraints>
                                     <constraint firstItem="em5-2f-l2F" firstAttribute="leading" secondItem="dyO-u2-vLm" secondAttribute="leading" id="7qa-go-6pg"/>
                                     <constraint firstAttribute="bottom" secondItem="em5-2f-l2F" secondAttribute="bottom" id="9Yh-Hp-D2D"/>
@@ -93,6 +129,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startBtn" destination="Rxi-x3-ecc" id="W1v-1H-rGG"/>
+                        <outlet property="startBtnV" destination="y4e-gW-ilh" id="MIR-Xo-BWM"/>
                         <outlet property="wlcmImg" destination="fuO-61-83D" id="p1G-EN-IGe"/>
                     </connections>
                 </viewController>
@@ -120,7 +158,10 @@
         <namedColor name="BgColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="TxtColor">
+        <namedColor name="PrimaryColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
