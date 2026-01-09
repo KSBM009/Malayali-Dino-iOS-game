@@ -24,10 +24,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpp-sv-KKg">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="550"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="730"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPb-p6-Ap2">
-                                                        <rect key="frame" x="5" y="25" width="383" height="500"/>
+                                                        <rect key="frame" x="5" y="25" width="383" height="680"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Malayali Dino Game!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cx-fl-cb6">
                                                                 <rect key="frame" x="10" y="85" width="363" height="20.333333333333329"/>
@@ -55,7 +55,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="550" id="4vR-zW-ax6"/>
+                                                    <constraint firstAttribute="height" constant="730" id="4vR-zW-ax6"/>
                                                     <constraint firstAttribute="bottom" secondItem="WPb-p6-Ap2" secondAttribute="bottom" constant="25" id="S0n-HG-utR"/>
                                                     <constraint firstItem="WPb-p6-Ap2" firstAttribute="top" secondItem="wpp-sv-KKg" secondAttribute="top" constant="25" id="l6o-ph-iTK"/>
                                                     <constraint firstItem="WPb-p6-Ap2" firstAttribute="leading" secondItem="wpp-sv-KKg" secondAttribute="leading" constant="5" id="nw9-jj-zBr"/>
@@ -99,6 +99,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="3.5211267605633805"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="MQf-33-agi">
+            <objects>
+                <viewController storyboardIdentifier="GameVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dCC-z5-m1O" customClass="GameVC" customModule="MalayaliDinoGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S99-cL-Wl8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GHH-x6-gN7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2V-fL-oRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="4"/>
         </scene>
     </scenes>
     <resources>

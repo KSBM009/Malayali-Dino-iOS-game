@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAAB63E32F10DC5400387890 /* CommonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB63E22F10DC5400387890 /* CommonVC.swift */; };
+		FAAB63E62F10F3D400387890 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB63E52F10F3D400387890 /* GameVC.swift */; };
 		FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */; };
 		FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */; };
 		FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		FAAB63E22F10DC5400387890 /* CommonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonVC.swift; sourceTree = "<group>"; };
+		FAAB63E52F10F3D400387890 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		FADB7BDF2EF4280B00F9DA19 /* MalayaliDinoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalayaliDinoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 			path = "Common Setup";
 			sourceTree = "<group>";
 		};
+		FAAB63E42F10F39400387890 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */,
+				FAAB63E52F10F3D400387890 /* GameVC.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		FADB7BD62EF4280B00F9DA19 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +90,7 @@
 				FAAB63E12F10DC2D00387890 /* Common Setup */,
 				FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */,
 				FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */,
-				FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */,
+				FAAB63E42F10F39400387890 /* Pages */,
 				FADB7BE82EF4280B00F9DA19 /* Main.storyboard */,
 				FADB7BEB2EF4280E00F9DA19 /* Assets.xcassets */,
 				FADB7BED2EF4280E00F9DA19 /* LaunchScreen.storyboard */,
@@ -168,6 +179,7 @@
 				FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */,
 				FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */,
 				FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */,
+				FAAB63E62F10F3D400387890 /* GameVC.swift in Sources */,
 				FAAB63E32F10DC5400387890 /* CommonVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
