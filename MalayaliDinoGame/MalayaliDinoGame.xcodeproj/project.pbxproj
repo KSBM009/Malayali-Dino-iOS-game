@@ -10,7 +10,7 @@
 		BBD99335693F14DF99B82AF2 /* Pods_MalayaliDinoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7099FB686F2615A139EB8012 /* Pods_MalayaliDinoGame.framework */; };
 		FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */; };
 		FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */; };
-		FADB7BE72EF4280B00F9DA19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE62EF4280B00F9DA19 /* ViewController.swift */; };
+		FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */; };
 		FADB7BEA2EF4280B00F9DA19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADB7BE82EF4280B00F9DA19 /* Main.storyboard */; };
 		FADB7BEC2EF4280E00F9DA19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADB7BEB2EF4280E00F9DA19 /* Assets.xcassets */; };
 		FADB7BEF2EF4280E00F9DA19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADB7BED2EF4280E00F9DA19 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		FADB7BDF2EF4280B00F9DA19 /* MalayaliDinoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalayaliDinoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FADB7BE62EF4280B00F9DA19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FADB7BE92EF4280B00F9DA19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FADB7BEB2EF4280E00F9DA19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FADB7BEE2EF4280E00F9DA19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,6 @@
 				6295409A21BD1137C54261F3 /* Pods-MalayaliDinoGame.debug.xcconfig */,
 				529CD6554D41397B56BD6E7D /* Pods-MalayaliDinoGame.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,7 +86,7 @@
 			children = (
 				FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */,
 				FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */,
-				FADB7BE62EF4280B00F9DA19 /* ViewController.swift */,
+				FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */,
 				FADB7BE82EF4280B00F9DA19 /* Main.storyboard */,
 				FADB7BEB2EF4280E00F9DA19 /* Assets.xcassets */,
 				FADB7BED2EF4280E00F9DA19 /* LaunchScreen.storyboard */,
@@ -218,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADB7BE72EF4280B00F9DA19 /* ViewController.swift in Sources */,
+				FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */,
 				FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */,
 				FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */,
 			);
