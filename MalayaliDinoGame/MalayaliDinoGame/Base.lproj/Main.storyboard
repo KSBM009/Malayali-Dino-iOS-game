@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xxz-ne-j6G">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fOf-WY-T4I">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Xxz-ne-j6G" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M06-v2-h2q">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xN6-OE-Wyh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hip-PV-N2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="4"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -109,7 +125,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="anO-3i-kaY"/>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="em5-2f-l2F" firstAttribute="leading" secondItem="dyO-u2-vLm" secondAttribute="leading" id="7qa-go-6pg"/>
                                     <constraint firstAttribute="bottom" secondItem="em5-2f-l2F" secondAttribute="bottom" id="9Yh-Hp-D2D"/>
@@ -120,7 +136,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="BgColor"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
                             <constraint firstItem="dyO-u2-vLm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5OD-fy-TCd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dyO-u2-vLm" secondAttribute="trailing" id="QdC-m9-UPn"/>
@@ -128,6 +144,7 @@
                             <constraint firstItem="dyO-u2-vLm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kc1-zQ-TjJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wBG-NL-QSk"/>
                     <connections>
                         <outlet property="startBtn" destination="Rxi-x3-ecc" id="W1v-1H-rGG"/>
                         <outlet property="startBtnV" destination="y4e-gW-ilh" id="MIR-Xo-BWM"/>
@@ -145,8 +162,34 @@
                     <view key="view" contentMode="scaleToFill" id="S99-cL-Wl8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuL-kV-kBO">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait as we are working hard to get the game live as soon as possible..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-jk-Kao">
+                                        <rect key="frame" x="5" y="25" width="383" height="709"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" name="SecondaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fDq-jk-Kao" firstAttribute="top" secondItem="LuL-kV-kBO" secondAttribute="top" constant="25" id="4bf-zy-GuT"/>
+                                    <constraint firstItem="fDq-jk-Kao" firstAttribute="leading" secondItem="LuL-kV-kBO" secondAttribute="leading" constant="5" id="Pza-Gn-vxN"/>
+                                    <constraint firstAttribute="bottom" secondItem="fDq-jk-Kao" secondAttribute="bottom" constant="25" id="YXz-7D-Wyh"/>
+                                    <constraint firstAttribute="trailing" secondItem="fDq-jk-Kao" secondAttribute="trailing" constant="5" id="jJf-JC-ond"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GHH-x6-gN7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="LuL-kV-kBO" firstAttribute="leading" secondItem="GHH-x6-gN7" secondAttribute="leading" id="Fwz-dt-bDq"/>
+                            <constraint firstItem="LuL-kV-kBO" firstAttribute="top" secondItem="GHH-x6-gN7" secondAttribute="top" id="UkC-WF-n6U"/>
+                            <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="LuL-kV-kBO" secondAttribute="trailing" id="ih7-dV-uXe"/>
+                            <constraint firstItem="GHH-x6-gN7" firstAttribute="bottom" secondItem="LuL-kV-kBO" secondAttribute="bottom" id="ipV-F5-HhJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2V-fL-oRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,9 +198,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="BgColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="PrimaryColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

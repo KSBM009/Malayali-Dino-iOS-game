@@ -29,6 +29,7 @@ class HomeVC: CommonVC {
 
     @IBAction func startBtnAction(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameVC") as! GameVC
+        print("Pushing to GameVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
