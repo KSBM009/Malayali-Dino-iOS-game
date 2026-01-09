@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAAB63E32F10DC5400387890 /* CommonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB63E22F10DC5400387890 /* CommonVC.swift */; };
 		FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */; };
 		FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */; };
 		FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FAAB63E22F10DC5400387890 /* CommonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonVC.swift; sourceTree = "<group>"; };
 		FADB7BDF2EF4280B00F9DA19 /* MalayaliDinoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalayaliDinoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FAAB63E12F10DC2D00387890 /* Common Setup */ = {
+			isa = PBXGroup;
+			children = (
+				FAAB63E22F10DC5400387890 /* CommonVC.swift */,
+			);
+			path = "Common Setup";
+			sourceTree = "<group>";
+		};
 		FADB7BD62EF4280B00F9DA19 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		FADB7BE12EF4280B00F9DA19 /* MalayaliDinoGame */ = {
 			isa = PBXGroup;
 			children = (
+				FAAB63E12F10DC2D00387890 /* Common Setup */,
 				FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */,
 				FADB7BE42EF4280B00F9DA19 /* SceneDelegate.swift */,
 				FADB7BE62EF4280B00F9DA19 /* HomeVC.swift */,
@@ -157,6 +168,7 @@
 				FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */,
 				FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */,
 				FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */,
+				FAAB63E32F10DC5400387890 /* CommonVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

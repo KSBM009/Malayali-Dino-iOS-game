@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,37 +17,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPb-p6-Ap2">
-                                <rect key="frame" x="5" y="84" width="383" height="709"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyO-u2-vLm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Malayali Dino Game!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cx-fl-cb6">
-                                        <rect key="frame" x="10" y="344" width="363" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" name="TxtColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="em5-2f-l2F">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpp-sv-KKg">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="550"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPb-p6-Ap2">
+                                                        <rect key="frame" x="5" y="25" width="383" height="500"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Malayali Dino Game!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cx-fl-cb6">
+                                                                <rect key="frame" x="10" y="85" width="363" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <color key="textColor" name="TxtColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fuO-61-83D">
+                                                                <rect key="frame" x="5" y="190.33333333333331" width="373" height="349.99999999999994"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="350" id="p4r-Ht-l36"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="0Cx-fl-cb6" secondAttribute="trailing" constant="10" id="CDb-3t-cJ9"/>
+                                                            <constraint firstItem="fuO-61-83D" firstAttribute="leading" secondItem="WPb-p6-Ap2" secondAttribute="leading" constant="5" id="Mrw-os-LJh"/>
+                                                            <constraint firstItem="fuO-61-83D" firstAttribute="top" secondItem="0Cx-fl-cb6" secondAttribute="bottom" constant="85" id="Rta-zE-Koh"/>
+                                                            <constraint firstItem="0Cx-fl-cb6" firstAttribute="leading" secondItem="WPb-p6-Ap2" secondAttribute="leading" constant="10" id="Zar-oK-gOL"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fuO-61-83D" secondAttribute="trailing" constant="5" id="evA-t7-18t"/>
+                                                            <constraint firstItem="0Cx-fl-cb6" firstAttribute="top" secondItem="WPb-p6-Ap2" secondAttribute="top" constant="85" id="yp5-yA-Gl6"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="550" id="4vR-zW-ax6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="WPb-p6-Ap2" secondAttribute="bottom" constant="25" id="S0n-HG-utR"/>
+                                                    <constraint firstItem="WPb-p6-Ap2" firstAttribute="top" secondItem="wpp-sv-KKg" secondAttribute="top" constant="25" id="l6o-ph-iTK"/>
+                                                    <constraint firstItem="WPb-p6-Ap2" firstAttribute="leading" secondItem="wpp-sv-KKg" secondAttribute="leading" constant="5" id="nw9-jj-zBr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WPb-p6-Ap2" secondAttribute="trailing" constant="5" id="pJa-8s-ss9"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wpp-sv-KKg" firstAttribute="leading" secondItem="em5-2f-l2F" secondAttribute="leading" id="GCa-ot-FrC"/>
+                                            <constraint firstAttribute="trailing" secondItem="wpp-sv-KKg" secondAttribute="trailing" id="vqk-6p-s6h"/>
+                                            <constraint firstItem="wpp-sv-KKg" firstAttribute="top" secondItem="em5-2f-l2F" secondAttribute="top" id="wPZ-jE-CSA"/>
+                                            <constraint firstAttribute="bottom" secondItem="wpp-sv-KKg" secondAttribute="bottom" id="yrx-wm-5xE"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="h2m-Hs-CsG"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="anO-3i-kaY"/>
+                                    </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="0Cx-fl-cb6" secondAttribute="trailing" constant="10" id="CDb-3t-cJ9"/>
-                                    <constraint firstItem="0Cx-fl-cb6" firstAttribute="leading" secondItem="WPb-p6-Ap2" secondAttribute="leading" constant="10" id="Zar-oK-gOL"/>
-                                    <constraint firstItem="0Cx-fl-cb6" firstAttribute="centerY" secondItem="WPb-p6-Ap2" secondAttribute="centerY" id="qgu-LL-3DX"/>
+                                    <constraint firstItem="em5-2f-l2F" firstAttribute="leading" secondItem="dyO-u2-vLm" secondAttribute="leading" id="7qa-go-6pg"/>
+                                    <constraint firstAttribute="bottom" secondItem="em5-2f-l2F" secondAttribute="bottom" id="9Yh-Hp-D2D"/>
+                                    <constraint firstItem="em5-2f-l2F" firstAttribute="top" secondItem="dyO-u2-vLm" secondAttribute="top" id="He1-Gh-bfL"/>
+                                    <constraint firstItem="wpp-sv-KKg" firstAttribute="width" secondItem="dyO-u2-vLm" secondAttribute="width" id="RZw-wN-3z2"/>
+                                    <constraint firstAttribute="trailing" secondItem="em5-2f-l2F" secondAttribute="trailing" id="jVi-bi-SOn"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
-                            <constraint firstItem="WPb-p6-Ap2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="DEq-jF-Kiy"/>
-                            <constraint firstItem="WPb-p6-Ap2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="VBT-aV-Zqc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WPb-p6-Ap2" secondAttribute="trailing" constant="5" id="nTO-nz-TX6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WPb-p6-Ap2" secondAttribute="bottom" constant="25" id="zbl-al-mSe"/>
+                            <constraint firstItem="dyO-u2-vLm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5OD-fy-TCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dyO-u2-vLm" secondAttribute="trailing" id="QdC-m9-UPn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dyO-u2-vLm" secondAttribute="bottom" id="hfi-dr-uoo"/>
+                            <constraint firstItem="dyO-u2-vLm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kc1-zQ-TjJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="wlcmImg" destination="fuO-61-83D" id="p1G-EN-IGe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="4"/>
+            <point key="canvasLocation" x="46.564885496183201" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
@@ -56,5 +108,8 @@
         <namedColor name="TxtColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

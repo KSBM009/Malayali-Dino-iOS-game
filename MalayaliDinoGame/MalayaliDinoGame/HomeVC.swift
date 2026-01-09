@@ -7,11 +7,21 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: CommonVC {
 
+    @IBOutlet weak var wlcmImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        updateImages()
+    }
+    
+    override func updateImages() {
+        // First Image is the Welcome Image
+        guard !imgs.isEmpty else { return }
+        self.wlcmImg.image = imgs[0]
     }
 
 }
