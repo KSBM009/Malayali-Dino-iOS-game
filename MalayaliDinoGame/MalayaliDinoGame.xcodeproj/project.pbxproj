@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA8BFA142F14B7E6006FBADD /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BFA132F14B7E6006FBADD /* CustomNavBar.swift */; };
+		FA8BFA162F14B7F7006FBADD /* CustomNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8BFA152F14B7F7006FBADD /* CustomNavBar.xib */; };
 		FAAB63E32F10DC5400387890 /* CommonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB63E22F10DC5400387890 /* CommonVC.swift */; };
 		FAAB63E62F10F3D400387890 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB63E52F10F3D400387890 /* GameVC.swift */; };
 		FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB7BE22EF4280B00F9DA19 /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA8BFA132F14B7E6006FBADD /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		FA8BFA152F14B7F7006FBADD /* CustomNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavBar.xib; sourceTree = "<group>"; };
 		FAAB63E22F10DC5400387890 /* CommonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonVC.swift; sourceTree = "<group>"; };
 		FAAB63E52F10F3D400387890 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		FADB7BDF2EF4280B00F9DA19 /* MalayaliDinoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalayaliDinoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				FAAB63E22F10DC5400387890 /* CommonVC.swift */,
+				FA8BFA132F14B7E6006FBADD /* CustomNavBar.swift */,
+				FA8BFA152F14B7F7006FBADD /* CustomNavBar.xib */,
 			);
 			path = "Common Setup";
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 			files = (
 				FADB7BEF2EF4280E00F9DA19 /* LaunchScreen.storyboard in Resources */,
 				FADB7BEC2EF4280E00F9DA19 /* Assets.xcassets in Resources */,
+				FA8BFA162F14B7F7006FBADD /* CustomNavBar.xib in Resources */,
 				FADB7BEA2EF4280B00F9DA19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8BFA142F14B7E6006FBADD /* CustomNavBar.swift in Sources */,
 				FADB7BE72EF4280B00F9DA19 /* HomeVC.swift in Sources */,
 				FADB7BE32EF4280B00F9DA19 /* AppDelegate.swift in Sources */,
 				FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */,

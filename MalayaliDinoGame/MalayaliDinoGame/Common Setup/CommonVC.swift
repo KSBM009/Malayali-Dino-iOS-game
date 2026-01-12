@@ -9,6 +9,8 @@ import UIKit
 
 class CommonVC: UIViewController {
     
+    let customNavBar: CustomNavBar = CustomNavBar().loadFromNib() as! CustomNavBar
+    
     var imgs: [UIImage] = []
     
     var darkImgs: [UIImage] = [
@@ -68,5 +70,7 @@ class CommonVC: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    private func setupUI() {}
     
 }
