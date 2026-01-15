@@ -25,6 +25,7 @@ class CommonVC: UIViewController {
         
         // Do any additional setup after loading the view.
         updateInterfaceStyle()
+        setupCommonNavBar()
         
     }
     
@@ -71,6 +72,26 @@ class CommonVC: UIViewController {
      }
      */
     
-    private func setupUI() {}
+    func setupCommonNavBar() {
+        // Hide the default navigation bar
+        self.navigationController?.isNavigationBarHidden = true
+        
+        // Add the custom navigation bar to the view
+        view.addSubview(customNavBar)
+        customNavBar.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Set up constraints for the custom navigation bar
+        NSLayoutConstraint.activate([
+            customNavBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
+            customNavBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            customNavBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        customNavBar.backBtn.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
+    }
+    
+    @objc func backBtnAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }
