@@ -19,6 +19,7 @@ class HomeVC: CommonVC {
         
         // Do any additional setup after loading the view.
         updateImages()
+        self.startBtnV.layer.cornerRadius = 5.0
     }
     
     override func updateImages() {
