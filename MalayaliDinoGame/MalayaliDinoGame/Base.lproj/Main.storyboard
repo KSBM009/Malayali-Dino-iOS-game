@@ -166,7 +166,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuL-kV-kBO">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait as we are working hard to get the game live as soon as possible..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-jk-Kao">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait as we are working hard to fix the issues pertaining within the game. We will be live as soon as possible..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-jk-Kao">
                                         <rect key="frame" x="5" y="25" width="383" height="709"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" name="SecondaryColor"/>
@@ -181,16 +181,28 @@
                                     <constraint firstAttribute="trailing" secondItem="fDq-jk-Kao" secondAttribute="trailing" constant="5" id="jJf-JC-ond"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpE-fh-cpA">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GHH-x6-gN7"/>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
+                            <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="ZpE-fh-cpA" secondAttribute="trailing" id="2lT-OY-AYL"/>
+                            <constraint firstItem="ZpE-fh-cpA" firstAttribute="top" secondItem="GHH-x6-gN7" secondAttribute="top" id="Ccd-pt-bVm"/>
                             <constraint firstItem="LuL-kV-kBO" firstAttribute="leading" secondItem="GHH-x6-gN7" secondAttribute="leading" id="Fwz-dt-bDq"/>
                             <constraint firstItem="LuL-kV-kBO" firstAttribute="top" secondItem="GHH-x6-gN7" secondAttribute="top" id="UkC-WF-n6U"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="LuL-kV-kBO" secondAttribute="trailing" id="ih7-dV-uXe"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="bottom" secondItem="LuL-kV-kBO" secondAttribute="bottom" id="ipV-F5-HhJ"/>
+                            <constraint firstItem="ZpE-fh-cpA" firstAttribute="leading" secondItem="GHH-x6-gN7" secondAttribute="leading" id="nik-Ap-E33"/>
+                            <constraint firstItem="GHH-x6-gN7" firstAttribute="bottom" secondItem="ZpE-fh-cpA" secondAttribute="bottom" id="zB6-Jp-bYs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IssueDisplayV" destination="LuL-kV-kBO" id="53f-8s-jdK"/>
+                        <outlet property="mainGameV" destination="ZpE-fh-cpA" id="Yu6-pB-Nlg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2V-fL-oRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

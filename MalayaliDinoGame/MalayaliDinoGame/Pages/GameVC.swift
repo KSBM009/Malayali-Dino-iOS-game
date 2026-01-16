@@ -16,11 +16,44 @@ class GameVC: CommonVC {
     private var didCollide: Bool = false
     
     private var dinoPosY: CGFloat = 0.0
+    
+    var ground1 = UIImageView()
+    var ground2 = UIImageView()
+    
+    var displayLink: CADisplayLink!
+    let groundSpeed: CGFloat = 3.0
 
+    @IBOutlet weak var mainGameV: UIView!
+    @IBOutlet weak var IssueDisplayV: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mainGameV.isHidden = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Prevent duplicate setup
+        guard ground1.superview == nil else { return }
+        
+        setupGround()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopGame()
+        cleanupGround()
+        mainGameV.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        mainGameV.isHidden = false
+        startGroundLoop()
     }
     
     /*
@@ -32,5 +65,57 @@ class GameVC: CommonVC {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func setupGround() {
+        let groundHeight: CGFloat = 185
+        let yPosition = (mainGameV.frame.height - groundHeight) / 2
+        
+        print("Main Game View Height: \(mainGameV.frame.height)\nGround Y Position: \(yPosition)")
+
+        ground1.image = UIImage(named: "ground1")
+        ground2.image = UIImage(named: "ground2")
+
+        ground1.frame = CGRect(x: 0,
+                                y: yPosition,
+                                width: mainGameV.frame.width,
+                                height: groundHeight)
+
+        ground2.frame = CGRect(x: view.frame.width,
+                                y: yPosition,
+                                width: mainGameV.frame.width,
+                                height: groundHeight)
+
+        mainGameV.addSubview(ground1)
+        mainGameV.addSubview(ground2)
+    }
+    
+    func startGroundLoop() {
+        displayLink = CADisplayLink(target: self, selector: #selector(updateGround))
+        displayLink.add(to: .main, forMode: .common)
+    }
+
+    @objc func updateGround() {
+        ground1.frame.origin.x -= groundSpeed
+        ground2.frame.origin.x -= groundSpeed
+
+        // Reset when off-screen
+        if ground1.frame.maxX <= 0 {
+            ground1.frame.origin.x = ground2.frame.maxX
+        }
+
+        if ground2.frame.maxX <= 0 {
+            ground2.frame.origin.x = ground1.frame.maxX
+        }
+    }
+    
+    func stopGame() {
+        displayLink?.invalidate()
+        displayLink = nil
+    }
+    
+    func cleanupGround() {
+        ground1.removeFromSuperview()
+        ground2.removeFromSuperview()
+    }
 
 }
