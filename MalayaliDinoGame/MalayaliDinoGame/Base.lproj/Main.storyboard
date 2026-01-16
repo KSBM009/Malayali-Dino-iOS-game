@@ -181,22 +181,43 @@
                                     <constraint firstAttribute="trailing" secondItem="fDq-jk-Kao" secondAttribute="trailing" constant="5" id="jJf-JC-ond"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpE-fh-cpA">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpE-fh-cpA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7vP-51-ATf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tex-We-Mz6">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
+                                                <color key="backgroundColor" name="skyColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3U-3b-mgq">
+                                                <rect key="frame" x="0.0" y="426" width="393" height="426"/>
+                                                <color key="backgroundColor" name="groundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7vP-51-ATf" secondAttribute="bottom" id="IZe-ht-d6h"/>
+                                    <constraint firstItem="7vP-51-ATf" firstAttribute="top" secondItem="ZpE-fh-cpA" secondAttribute="top" id="OWi-af-wI5"/>
+                                    <constraint firstAttribute="trailing" secondItem="7vP-51-ATf" secondAttribute="trailing" id="olc-73-hBV"/>
+                                    <constraint firstItem="7vP-51-ATf" firstAttribute="leading" secondItem="ZpE-fh-cpA" secondAttribute="leading" id="uBU-EK-1OK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GHH-x6-gN7"/>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
+                            <constraint firstItem="ZpE-fh-cpA" firstAttribute="top" secondItem="S99-cL-Wl8" secondAttribute="top" id="1db-Y0-bx8"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="ZpE-fh-cpA" secondAttribute="trailing" id="2lT-OY-AYL"/>
-                            <constraint firstItem="ZpE-fh-cpA" firstAttribute="top" secondItem="GHH-x6-gN7" secondAttribute="top" id="Ccd-pt-bVm"/>
+                            <constraint firstAttribute="bottom" secondItem="ZpE-fh-cpA" secondAttribute="bottom" id="BD9-2h-2Ky"/>
                             <constraint firstItem="LuL-kV-kBO" firstAttribute="leading" secondItem="GHH-x6-gN7" secondAttribute="leading" id="Fwz-dt-bDq"/>
                             <constraint firstItem="LuL-kV-kBO" firstAttribute="top" secondItem="GHH-x6-gN7" secondAttribute="top" id="UkC-WF-n6U"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="LuL-kV-kBO" secondAttribute="trailing" id="ih7-dV-uXe"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="bottom" secondItem="LuL-kV-kBO" secondAttribute="bottom" id="ipV-F5-HhJ"/>
                             <constraint firstItem="ZpE-fh-cpA" firstAttribute="leading" secondItem="GHH-x6-gN7" secondAttribute="leading" id="nik-Ap-E33"/>
-                            <constraint firstItem="GHH-x6-gN7" firstAttribute="bottom" secondItem="ZpE-fh-cpA" secondAttribute="bottom" id="zB6-Jp-bYs"/>
                         </constraints>
                     </view>
                     <connections>
@@ -215,6 +236,12 @@
         </namedColor>
         <namedColor name="SecondaryColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="groundColor">
+            <color red="0.94509804248809814" green="0.83921569585800171" blue="0.66274511814117432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="skyColor">
+            <color red="0.729411780834198" green="0.86666667461395264" blue="0.88235294818878174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

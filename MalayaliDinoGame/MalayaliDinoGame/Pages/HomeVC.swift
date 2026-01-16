@@ -20,7 +20,7 @@ class HomeVC: CommonVC {
         // Do any additional setup after loading the view.
         updateImages()
         self.startBtnV.layer.cornerRadius = 5.0
-        customNavBar.backBtnV.isHidden = true
+//        customNavBar.backBtnV.isHidden = true
     }
     
     override func updateImages() {

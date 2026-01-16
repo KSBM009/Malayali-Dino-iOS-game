@@ -25,7 +25,7 @@ class CommonVC: UIViewController {
         
         // Do any additional setup after loading the view.
         updateInterfaceStyle()
-        setupCommonNavBar()
+//        setupCommonNavBar()
         
     }
     
