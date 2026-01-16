@@ -26,34 +26,40 @@ class GameVC: CommonVC {
     @IBOutlet weak var mainGameV: UIView!
     @IBOutlet weak var IssueDisplayV: UIView!
     
+    @IBOutlet weak var gameMenuV: UIView!
+    
+    @IBOutlet weak var startMenuV: UIView!
+    @IBOutlet weak var startMenuImgV: UIImageView!
+    @IBOutlet weak var startBtnV: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         mainGameV.isHidden = true
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+        gameMenuV.isHidden = false
         
-        // Prevent duplicate setup
-        guard ground1.superview == nil else { return }
+        startBtnV.layer.cornerRadius = 25.0
         
-        setupGround()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        stopGame()
-        cleanupGround()
-        mainGameV.isHidden = true
+        updateImages()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         mainGameV.isHidden = false
-        startGroundLoop()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopGame()
+        mainGameV.isHidden = true
+    }
+    
+    override func updateImages() {
+        // Second Image is the Image for Start Up Menu
+        guard !imgs.isEmpty else { return }
+        self.startMenuImgV.image = imgs[1]
     }
     
     /*
@@ -67,6 +73,9 @@ class GameVC: CommonVC {
     */
     
     func setupGround() {
+        // Prevent duplicate setup
+        guard ground1.superview == nil else { return }
+        
         let groundHeight: CGFloat = 185
         let yPosition = (mainGameV.frame.height - groundHeight) / 2
         
@@ -93,6 +102,13 @@ class GameVC: CommonVC {
         displayLink = CADisplayLink(target: self, selector: #selector(updateGround))
         displayLink.add(to: .main, forMode: .common)
     }
+    
+    func startGame() {
+        setupGround()
+        
+        isGameStart = true
+        startGroundLoop()
+    }
 
     @objc func updateGround() {
         ground1.frame.origin.x -= groundSpeed
@@ -111,6 +127,7 @@ class GameVC: CommonVC {
     func stopGame() {
         displayLink?.invalidate()
         displayLink = nil
+        cleanupGround()
     }
     
     func cleanupGround() {
@@ -118,4 +135,13 @@ class GameVC: CommonVC {
         ground2.removeFromSuperview()
     }
 
+    @IBAction func startBtnClick(_ sender: Any) {
+        print("Start Button Clicked")
+        
+        startGame()
+        
+        gameMenuV.isHidden = true
+        startMenuV.isHidden = true
+    }
+    
 }

@@ -14,10 +14,12 @@ class CommonVC: UIViewController {
     var imgs: [UIImage] = []
     
     var darkImgs: [UIImage] = [
-        UIImage(named: "wlcmImgDark")!
+        UIImage(named: "wlcmImgDark")!,
+        UIImage(named: "dinoImgDark")!
     ]
     var lightImgs: [UIImage] = [
-        UIImage(named: "wlcmImgLight")!
+        UIImage(named: "wlcmImgLight")!,
+        UIImage(named: "dinoImgLight")!
     ]
     
     override func viewDidLoad() {

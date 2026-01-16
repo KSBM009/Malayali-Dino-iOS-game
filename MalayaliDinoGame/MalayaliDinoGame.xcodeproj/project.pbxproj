@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7CDFE02F1A41A500637220 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CDFDF2F1A41A500637220 /* Extensions.swift */; };
 		FA8BFA142F14B7E6006FBADD /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BFA132F14B7E6006FBADD /* CustomNavBar.swift */; };
 		FA8BFA162F14B7F7006FBADD /* CustomNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8BFA152F14B7F7006FBADD /* CustomNavBar.xib */; };
 		FAAB63E32F10DC5400387890 /* CommonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB63E22F10DC5400387890 /* CommonVC.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA7CDFDF2F1A41A500637220 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA8BFA132F14B7E6006FBADD /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		FA8BFA152F14B7F7006FBADD /* CustomNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavBar.xib; sourceTree = "<group>"; };
 		FAAB63E22F10DC5400387890 /* CommonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonVC.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				FAAB63E22F10DC5400387890 /* CommonVC.swift */,
 				FA8BFA132F14B7E6006FBADD /* CustomNavBar.swift */,
 				FA8BFA152F14B7F7006FBADD /* CustomNavBar.xib */,
+				FA7CDFDF2F1A41A500637220 /* Extensions.swift */,
 			);
 			path = "Common Setup";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				FADB7BE52EF4280B00F9DA19 /* SceneDelegate.swift in Sources */,
 				FAAB63E62F10F3D400387890 /* GameVC.swift in Sources */,
 				FAAB63E32F10DC5400387890 /* CommonVC.swift in Sources */,
+				FA7CDFE02F1A41A500637220 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
