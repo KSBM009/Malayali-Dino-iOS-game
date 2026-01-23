@@ -32,6 +32,8 @@ class GameVC: CommonVC {
     @IBOutlet weak var startMenuImgV: UIImageView!
     @IBOutlet weak var startBtnV: UIView!
     
+    @IBOutlet weak var pauseBtnV: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +44,8 @@ class GameVC: CommonVC {
         startBtnV.layer.cornerRadius = 25.0
         
         updateImages()
+        
+        pauseMenuActivation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,6 +146,16 @@ class GameVC: CommonVC {
         
         gameMenuV.isHidden = true
         startMenuV.isHidden = true
+    }
+    
+    @IBAction func pauseBtnClick(_ sender: Any) {
+        self.gameMenuV.isHidden = false
+    }
+    
+    func pauseMenuActivation() {
+        while true {
+            self.pauseBtnV.isHidden = !self.gameMenuV.isHidden
+        }
     }
     
 }

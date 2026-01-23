@@ -273,24 +273,58 @@
                                     <constraint firstItem="7vP-51-ATf" firstAttribute="leading" secondItem="ZpE-fh-cpA" secondAttribute="leading" id="uBU-EK-1OK"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDk-fn-CeS">
+                                <rect key="frame" x="318" y="84" width="50" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-LW-Zew">
+                                        <rect key="frame" x="7.6666666666666856" y="10.000000000000004" width="35" height="30.333333333333339"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="SecondaryColor"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55W-yj-mPh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="pauseBtnClick:" destination="dCC-z5-m1O" eventType="touchUpInside" id="JRo-OX-Vlq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="55W-yj-mPh" secondAttribute="bottom" id="7tA-eN-dk6"/>
+                                    <constraint firstItem="55W-yj-mPh" firstAttribute="top" secondItem="HDk-fn-CeS" secondAttribute="top" id="Fje-xm-8tl"/>
+                                    <constraint firstItem="OGf-LW-Zew" firstAttribute="top" secondItem="HDk-fn-CeS" secondAttribute="top" constant="7.5" id="O7q-IW-j9k"/>
+                                    <constraint firstAttribute="bottom" secondItem="OGf-LW-Zew" secondAttribute="bottom" constant="7.5" id="PDg-lh-9aG"/>
+                                    <constraint firstAttribute="width" constant="50" id="Uo8-SH-NXN"/>
+                                    <constraint firstAttribute="trailing" secondItem="55W-yj-mPh" secondAttribute="trailing" id="Yyv-of-O0J"/>
+                                    <constraint firstItem="55W-yj-mPh" firstAttribute="leading" secondItem="HDk-fn-CeS" secondAttribute="leading" id="ZLx-ax-7vD"/>
+                                    <constraint firstAttribute="trailing" secondItem="OGf-LW-Zew" secondAttribute="trailing" constant="7.5" id="ayP-mf-UUG"/>
+                                    <constraint firstItem="OGf-LW-Zew" firstAttribute="leading" secondItem="HDk-fn-CeS" secondAttribute="leading" constant="7.5" id="h6K-Z0-pN8"/>
+                                    <constraint firstAttribute="height" constant="50" id="lpI-OV-dme"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GHH-x6-gN7"/>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
                             <constraint firstItem="ZpE-fh-cpA" firstAttribute="top" secondItem="S99-cL-Wl8" secondAttribute="top" id="1db-Y0-bx8"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="ZpE-fh-cpA" secondAttribute="trailing" id="2lT-OY-AYL"/>
+                            <constraint firstItem="HDk-fn-CeS" firstAttribute="top" secondItem="GHH-x6-gN7" secondAttribute="top" constant="25" id="3k2-1v-cuA"/>
                             <constraint firstAttribute="bottom" secondItem="ZpE-fh-cpA" secondAttribute="bottom" id="BD9-2h-2Ky"/>
                             <constraint firstItem="LuL-kV-kBO" firstAttribute="leading" secondItem="GHH-x6-gN7" secondAttribute="leading" id="Fwz-dt-bDq"/>
                             <constraint firstItem="LuL-kV-kBO" firstAttribute="top" secondItem="GHH-x6-gN7" secondAttribute="top" id="UkC-WF-n6U"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="LuL-kV-kBO" secondAttribute="trailing" id="ih7-dV-uXe"/>
                             <constraint firstItem="GHH-x6-gN7" firstAttribute="bottom" secondItem="LuL-kV-kBO" secondAttribute="bottom" id="ipV-F5-HhJ"/>
                             <constraint firstItem="ZpE-fh-cpA" firstAttribute="leading" secondItem="GHH-x6-gN7" secondAttribute="leading" id="nik-Ap-E33"/>
+                            <constraint firstItem="GHH-x6-gN7" firstAttribute="trailing" secondItem="HDk-fn-CeS" secondAttribute="trailing" constant="25" id="yUz-v0-JuO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="IssueDisplayV" destination="LuL-kV-kBO" id="53f-8s-jdK"/>
                         <outlet property="gameMenuV" destination="4sj-FR-nid" id="6We-gJ-Clx"/>
                         <outlet property="mainGameV" destination="ZpE-fh-cpA" id="Yu6-pB-Nlg"/>
+                        <outlet property="pauseBtnV" destination="HDk-fn-CeS" id="x0N-T3-chR"/>
                         <outlet property="startBtnV" destination="dXh-U0-eF9" id="DMs-tK-ymd"/>
                         <outlet property="startMenuImgV" destination="uY6-pw-uZg" id="hy2-RC-wve"/>
                         <outlet property="startMenuV" destination="vo5-CP-oup" id="3b3-7b-RU3"/>
@@ -302,6 +336,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
         <namedColor name="PrimaryColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
