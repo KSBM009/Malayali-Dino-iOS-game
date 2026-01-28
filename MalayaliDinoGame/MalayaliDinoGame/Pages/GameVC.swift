@@ -32,20 +32,27 @@ class GameVC: CommonVC {
     @IBOutlet weak var startMenuImgV: UIImageView!
     @IBOutlet weak var startBtnV: UIView!
     
+    @IBOutlet weak var pauseMenuV: UIView!
+    
+    @IBOutlet weak var resumeBtnV: UIView!
+    @IBOutlet weak var diffBtnV: UIView!
+    @IBOutlet weak var exitBtnV: UIView!
+    
     @IBOutlet weak var pauseBtnV: UIView!
+    
+    var displayGameMenuV = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         mainGameV.isHidden = true
-        gameMenuV.isHidden = false
         
-        startBtnV.layer.cornerRadius = 25.0
+        gameMenuV.isHidden = false
+        displayGameMenuV = false
         
         updateImages()
         
-        pauseMenuActivation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -144,18 +151,65 @@ class GameVC: CommonVC {
         
         startGame()
         
-        gameMenuV.isHidden = true
-        startMenuV.isHidden = true
+        setupGameMenuVs(menuType: .none)
     }
     
     @IBAction func pauseBtnClick(_ sender: Any) {
-        self.gameMenuV.isHidden = false
+        stopGame()
+        setupGameMenuVs(menuType: .pause)
     }
     
     func pauseMenuActivation() {
         while true {
-            self.pauseBtnV.isHidden = !self.gameMenuV.isHidden
+            self.pauseBtnV.isHidden = !displayGameMenuV
         }
     }
     
+    @IBAction func resumeBtnClick(_ sender: Any) {
+        print("Resume Button Clicked")
+    }
+    
+    @IBAction func difficultyBtnClick(_ sender: Any) {
+        print("Difficulty Button Clicked")
+    }
+    
+    @IBAction func exitBtnClick(_ sender: Any) {
+        print("Exit Button Clicked")
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func setupGameMenuVs(menuType: gameMenusType) {
+        gameMenuV.isHidden = false
+        displayGameMenuV = false
+        
+        switch menuType {
+        case .start:
+            print("Start Menu Setup!")
+            
+            self.startMenuV.isHidden = false
+            self.pauseMenuV.isHidden = true
+            
+        case .pause:
+            print("Pause Menu Setup!")
+            
+            self.startMenuV.isHidden = true
+            self.pauseMenuV.isHidden = false
+            
+        case .none:
+            print("Removing all the Menu Setups!")
+            
+            self.gameMenuV.isHidden = true
+            displayGameMenuV = true
+            
+            self.startMenuV.isHidden = true
+            self.pauseMenuV.isHidden = true
+        }
+    }
+    
+    enum gameMenusType {
+        case start
+        case pause
+        case none
+    }
 }
