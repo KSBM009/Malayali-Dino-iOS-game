@@ -17,10 +17,15 @@ class GameVC: CommonVC {
     
     private var dinoPosY: CGFloat = 0.0
     
+    var groundViews: [UIView] {
+        return [ground1, ground2]
+    }
+    
     var ground1 = UIImageView()
     var ground2 = UIImageView()
     
     var displayLink: CADisplayLink!
+    var isGamePaused = false
     let groundSpeed: CGFloat = 3.0
 
     @IBOutlet weak var mainGameV: UIView!
@@ -120,6 +125,28 @@ class GameVC: CommonVC {
         isGameStart = true
         startGroundLoop()
     }
+    
+    func pauseGame() {
+        guard let displayLink = displayLink, !isGamePaused else { return }
+        
+        // Pause logic
+        displayLink.isPaused = true
+        isGamePaused = true
+        
+        // Hide visuals
+        groundViews.forEach { $0.isHidden = true }
+    }
+    
+    func resumeGame() {
+        guard let displayLink = displayLink, isGamePaused else { return }
+        
+        // Show visuals
+        groundViews.forEach { $0.isHidden = false }
+        
+        // Resume logic
+        displayLink.isPaused = false
+        isGamePaused = false
+    }
 
     @objc func updateGround() {
         ground1.frame.origin.x -= groundSpeed
@@ -155,7 +182,7 @@ class GameVC: CommonVC {
     }
     
     @IBAction func pauseBtnClick(_ sender: Any) {
-        stopGame()
+        pauseGame()
         setupGameMenuVs(menuType: .pause)
     }
     
@@ -167,6 +194,9 @@ class GameVC: CommonVC {
     
     @IBAction func resumeBtnClick(_ sender: Any) {
         print("Resume Button Clicked")
+        
+        resumeGame()
+        setupGameMenuVs(menuType: .none)
     }
     
     @IBAction func difficultyBtnClick(_ sender: Any) {
@@ -176,6 +206,7 @@ class GameVC: CommonVC {
     @IBAction func exitBtnClick(_ sender: Any) {
         print("Exit Button Clicked")
         
+        stopGame()
         self.navigationController?.popViewController(animated: true)
     }
     
