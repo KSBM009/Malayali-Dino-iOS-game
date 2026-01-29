@@ -186,12 +186,6 @@ class GameVC: CommonVC {
         setupGameMenuVs(menuType: .pause)
     }
     
-    func pauseMenuActivation() {
-        while true {
-            self.pauseBtnV.isHidden = !displayGameMenuV
-        }
-    }
-    
     @IBAction func resumeBtnClick(_ sender: Any) {
         print("Resume Button Clicked")
         
@@ -206,13 +200,13 @@ class GameVC: CommonVC {
     @IBAction func exitBtnClick(_ sender: Any) {
         print("Exit Button Clicked")
         
-        stopGame()
         self.navigationController?.popViewController(animated: true)
     }
     
     func setupGameMenuVs(menuType: gameMenusType) {
         gameMenuV.isHidden = false
         displayGameMenuV = false
+        self.pauseBtnV.isHidden = true
         
         switch menuType {
         case .start:
@@ -232,6 +226,7 @@ class GameVC: CommonVC {
             
             self.gameMenuV.isHidden = true
             displayGameMenuV = true
+            self.pauseBtnV.isHidden = false
             
             self.startMenuV.isHidden = true
             self.pauseMenuV.isHidden = true

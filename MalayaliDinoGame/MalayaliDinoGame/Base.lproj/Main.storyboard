@@ -471,7 +471,7 @@
                                     <constraint firstItem="7vP-51-ATf" firstAttribute="leading" secondItem="ZpE-fh-cpA" secondAttribute="leading" id="uBU-EK-1OK"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDk-fn-CeS">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDk-fn-CeS">
                                 <rect key="frame" x="318" y="84" width="50" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-LW-Zew">
