@@ -47,6 +47,15 @@ class GameVC: CommonVC {
     
     var displayGameMenuV = true
     
+    private let dinoImageView = UIImageView()
+    
+    func setupDino() {
+        dinoImageView.frame = CGRect(x: 80, y: dinoPosY, width: 80, height: 80)
+        dinoImageView.contentMode = .scaleAspectFit
+        dinoImageView.image = UIImage(named: "dino_run_1") // initial frame
+        view.addSubview(dinoImageView)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,6 +67,7 @@ class GameVC: CommonVC {
         
         updateImages()
         
+        setupDino()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,7 +105,9 @@ class GameVC: CommonVC {
         let groundHeight: CGFloat = 185
         let yPosition = (mainGameV.frame.height - groundHeight) / 2
         
-        print("Main Game View Height: \(mainGameV.frame.height)\nGround Y Position: \(yPosition)")
+        dinoPosY = yPosition
+        
+        print("Main Game View Height: \(groundHeight)\nGround Y Position: \(yPosition)")
 
         ground1.image = UIImage(named: "ground1")
         ground2.image = UIImage(named: "ground2")
@@ -124,6 +136,12 @@ class GameVC: CommonVC {
         
         isGameStart = true
         startGroundLoop()
+        
+        startDinoRunning()
+    }
+    
+    func startDinoRunning() {
+        print("Dino started Running!")
     }
     
     func pauseGame() {
