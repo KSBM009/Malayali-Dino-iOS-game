@@ -26,7 +26,8 @@ class GameVC: CommonVC {
     
     var displayLink: CADisplayLink!
     var isGamePaused = false
-    let groundSpeed: CGFloat = 3.0
+    var baseGameSpeed: CGFloat = 3.0
+    var currGameSpeed: CGFloat = 5.0
 
     @IBOutlet weak var mainGameV: UIView!
     @IBOutlet weak var IssueDisplayV: UIView!
@@ -155,6 +156,10 @@ class GameVC: CommonVC {
         groundViews.forEach { $0.isHidden = true }
     }
     
+    func pauseDinoRunning() {
+        print("Dino paused Running!")
+    }
+    
     func resumeGame() {
         guard let displayLink = displayLink, isGamePaused else { return }
         
@@ -165,10 +170,14 @@ class GameVC: CommonVC {
         displayLink.isPaused = false
         isGamePaused = false
     }
+    
+    func resumeDinoRunning() {
+        print("Dino resumes Running!")
+    }
 
     @objc func updateGround() {
-        ground1.frame.origin.x -= groundSpeed
-        ground2.frame.origin.x -= groundSpeed
+        ground1.frame.origin.x -= currGameSpeed
+        ground2.frame.origin.x -= currGameSpeed
 
         // Reset when off-screen
         if ground1.frame.maxX <= 0 {
@@ -183,12 +192,22 @@ class GameVC: CommonVC {
     func stopGame() {
         displayLink?.invalidate()
         displayLink = nil
+        stopDinoRunning()
+        cleanUpDinoRunning()
         cleanupGround()
     }
     
     func cleanupGround() {
         ground1.removeFromSuperview()
         ground2.removeFromSuperview()
+    }
+    
+    func stopDinoRunning() {
+        print("Dino stopped Running!")
+    }
+    
+    func cleanUpDinoRunning() {
+        print("Dino Views cleanedup/removed!")
     }
 
     @IBAction func startBtnClick(_ sender: Any) {
