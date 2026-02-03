@@ -46,6 +46,8 @@ class GameVC: CommonVC {
     
     @IBOutlet weak var pauseBtnV: UIView!
     
+    @IBOutlet weak var gameElementsV: UIView!
+    
     var displayGameMenuV = true
     
     private let dinoImageView = UIImageView()
@@ -84,9 +86,7 @@ class GameVC: CommonVC {
     }
     
     override func updateImages() {
-        // Second Image is the Image for Start Up Menu
-        guard !imgs.isEmpty else { return }
-        self.startMenuImgV.image = imgs[1]
+        self.startMenuImgV.image = UIImage(named: "dinoImg")
     }
     
     /*
@@ -244,6 +244,7 @@ class GameVC: CommonVC {
         gameMenuV.isHidden = false
         displayGameMenuV = false
         self.pauseBtnV.isHidden = true
+        self.gameElementsV.isHidden = true
         
         switch menuType {
         case .start:
@@ -264,6 +265,7 @@ class GameVC: CommonVC {
             self.gameMenuV.isHidden = true
             displayGameMenuV = true
             self.pauseBtnV.isHidden = false
+            self.gameElementsV.isHidden = false
             
             self.startMenuV.isHidden = true
             self.pauseMenuV.isHidden = true
