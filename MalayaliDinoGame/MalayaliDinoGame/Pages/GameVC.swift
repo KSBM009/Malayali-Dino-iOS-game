@@ -48,16 +48,9 @@ class GameVC: CommonVC {
     
     @IBOutlet weak var gameElementsV: UIView!
     
+    @IBOutlet weak var dinoV: UIView!
+    
     var displayGameMenuV = true
-    
-    private let dinoImageView = UIImageView()
-    
-    func setupDino() {
-        dinoImageView.frame = CGRect(x: 80, y: dinoPosY, width: 80, height: 80)
-        dinoImageView.contentMode = .scaleAspectFit
-        dinoImageView.image = UIImage(named: "dino_run_1") // initial frame
-        view.addSubview(dinoImageView)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +62,6 @@ class GameVC: CommonVC {
         displayGameMenuV = false
         
         updateImages()
-        
-        setupDino()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -143,6 +134,36 @@ class GameVC: CommonVC {
     
     func startDinoRunning() {
         print("Dino started Running!")
+    }
+    
+    @IBAction func dinoJumpBtnAction(_ sender: UIButton) {
+        print("Dino Jump Btn Clicked!")
+        
+        sender.isEnabled = false   // 🚫 disable button
+        print("Dino on Air!")
+        
+        UIView.animate(
+            withDuration: 0.55,
+            delay: 0,
+            options: [.curveEaseInOut],
+            animations: {
+                self.dinoV.transform = CGAffineTransform(translationX: 0, y: -95)
+            },
+            completion: { _ in
+                UIView.animate(
+                    withDuration: 0.55,
+                    delay: 0,
+                    options: [.curveEaseInOut],
+                    animations: {
+                        self.dinoV.transform = .identity
+                    },
+                    completion: { _ in
+                        sender.isEnabled = true   // ✅ re-enable button
+                        print("Dino Landed!")
+                    }
+                )
+            }
+        )
     }
     
     func pauseGame() {
